@@ -1,5 +1,5 @@
 # peru-dni
 
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="282" height="20"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="282" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path fill="#555" d="M0 0h35v20H0z"/><path fill="#e05d44" d="M35 0h247v20H35z"/><path fill="url(#b)" d="M0 0h282v20H0z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"> <text x="185" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="250">npm</text><text x="185" y="140" transform="scale(.1)" textLength="250">npm</text><text x="1575" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="2370">https://www.npmjs.com/package/peru-dni</text><text x="1575" y="140" transform="scale(.1)" textLength="2370">https://www.npmjs.com/package/peru-dni</text></g> </svg>
+![npm](https://img.shields.io/npm/v/peru-dni)
 
 Node module to fetch real name from peruvian's dni
