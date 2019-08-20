@@ -6,5 +6,6 @@ Node module to fetch real name from peruvian's dni
 
 How to Install:
   Using npm:
+    
     > $ npm install peru-dni --save
     
