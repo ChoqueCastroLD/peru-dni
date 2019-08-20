@@ -2,6 +2,7 @@
 
 ![npm](https://img.shields.io/npm/v/peru-dni)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/peru-dni)
+![GitHub stars](https://img.shields.io/github/stars/ChoqueCastroLD/peru-dni?style=plastic)
 
 Node module to fetch real name from peruvian's dni
 
