@@ -1,0 +1,9 @@
+{
+  "name": "peru-dni",
+  "version": "1.0.2",
+  "description": "Node module to fetch real name from peruvian's dni",
+  "main": "index.js",
+  "keywords": ["peru", "reniec", "sunat", "dni", "consulta", "query", "real name", "nombre real"],
+  "author": "ChoqueCastroLD a.k.a shokocc",
+  "license": "GNU"
+}
