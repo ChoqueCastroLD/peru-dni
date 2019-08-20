@@ -17,23 +17,23 @@ How to use:
   (Nodejs example)
  
 ```javascript
-  const perudni = require('perudni');
-  
+  const perudni = require('peru-dni');
+
   // using Callbacks
-  perudni.getName('71747115', (data, err) => {
-    if(err){
-      console.log("Something went way wrong " + err.message)
-    } else {
-      console.log("Last name is " + data.lastname + " Full name is " + data.fullname);
-    }
-  });  
-  
-  // using Promises
-  perudni.getName('71747115')
-  .then( data => {
-    console.log("Real name is " + data.fullname);  
-  })
-  .catch( err => {
-    console.log("Something went wrong ", err.message);
+  perudni.getNameFromDNI('71747104', (data, err) => {
+      if (err) {
+          console.log("Something went way wrong " + err.message)
+      } else {
+          console.log("Last name is " + data.lastname + " Full name is " + data.fullname);
+      }
   });
+
+  // using Promises
+  perudni.getNameFromDNI('71747104')
+      .then(data => {
+          console.log("Real name is " + data.fullname);
+      })
+      .catch(err => {
+          console.log("Something went wrong ", err.message);
+      });
 ```
