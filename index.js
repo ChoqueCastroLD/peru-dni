@@ -19,13 +19,19 @@ const perudni = {
                 } else {
                     cb({
                         dni: dni,
-                    }, {err: true, message: "Real name not found"});
+                    }, {
+                        err: true,
+                        message: "Real name not found"
+                    });
                 }
             })
             .catch(() => {
                 cb({
                     dni: dni,
-                }, {err: true, message: "Fetch just failed"});
+                }, {
+                    err: true,
+                    message: "Fetch just failed"
+                });
             })
     },
     getNameFromDNI(dni) {
@@ -40,6 +46,7 @@ const perudni = {
                         datos = datos.split('|');
                         resolve({
                             dni: dni,
+                            fullname: `${datos[2]} ${datos[0]} ${datos[1]}`,
                             lastname: datos[0],
                             secondlastname: datos[1],
                             name: datos[2]
