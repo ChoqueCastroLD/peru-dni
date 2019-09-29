@@ -1,6 +1,6 @@
 {
   "name": "peru-dni",
-  "version": "6.0.5",
+  "version": "6.0.6",
   "description": "Node module to fetch real name from peruvian's dni",
   "main": "src/getNameFromDNI.js",
   "keywords": [
