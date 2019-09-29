@@ -67,3 +67,6 @@ If there's no connection with the external public API, it will throw an error
 'Fetch failed'
 ```
 
+
+Run tests with
+> $ npm run test
