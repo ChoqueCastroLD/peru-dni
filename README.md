@@ -18,23 +18,52 @@ How to use:
   (Nodejs example)
  
 ```javascript
-  const perudni = require('peru-dni');
+const perudni = require('peru-dni');
 
-  // using Callbacks
-  perudni.getNameFromDNI('71747104', (data, err) => {
-      if (err) {
-          console.log("Something went way wrong " + err.message)
-      } else {
-          console.log("Last name is " + data.lastname + " Full name is " + data.fullname);
-      }
-  });
+// using Promises
+perudni.getNameFromDNI(71747104)
+    .then(data => {
+        console.log('Real name is ' + data.fullname);
+    })
+    .catch(err => {
+        console.log('Something went wrong ', err);
+    });
 
-  // using Promises
-  perudni.getNameFromDNI('71747104')
-      .then(data => {
-          console.log("Real name is " + data.fullname);
-      })
-      .catch(err => {
-          console.log("Something went wrong ", err.message);
-      });
+// using async/await
+async function main() {
+    try {
+        let data = await perudni.getNameFromDNI(71747104);
+
+        console.log(`${data.dni} > ${data.fullname}`);
+    } catch (err) {
+        console.log('Something went wrong ', err);
+    }
+}
+main();
+    
 ```
+
+getNameFromDNI()
+If everything works well it will return an object like this:
+```javascript
+{
+    dni: '00000003',
+    fullname: 'CARLOTA MEZA DE RUIZ',
+    lastname: 'MEZA',
+    secondlastname: 'DE RUIZ',
+    name: 'CARLOTA'
+}
+```
+If there's no one with that DNI
+```javascript
+{
+    dni: '00000000',
+    error: 'DNI no encontrado en Padrón Electoral',
+    message: 'Cant get name from that DNI'
+}
+```
+If there's no connection with the external public API, it will throw an error 
+```javascript
+'Fetch failed'
+```
+
